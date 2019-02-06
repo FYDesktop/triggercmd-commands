@@ -1,0 +1,572 @@
+[
+ {
+  "trigger": "check updates",
+  "command": "aptdcon --refresh",
+  "ground": "foreground",
+  "voice": "check updates",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "update",
+  "command": "aptdcon --safe-upgrade",
+  "ground": "foreground",
+  "voice": "update",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "desktop",
+  "command": "wmctrl -k on",
+  "ground": "foreground",
+  "voice": "desktop",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "restore windows",
+  "command": "wmctrl -k off",
+  "ground": "foreground",
+  "voice": "restore windows",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "minimise window",
+  "command": "xdotool windowminimize `xdotool getactivewindow`",
+  "ground": "foreground",
+  "voice": "minimise window",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "maximise window",
+  "command": "wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz",
+  "ground": "foreground",
+  "voice": "maximise window",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "unmaximise window",
+  "command": "wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz",
+  "ground": "foreground",
+  "voice": "unmaximise window",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "close window",
+  "command": "xdotool windowkill `xdotool getactivewindow`",
+  "ground": "foreground",
+  "voice": "close window",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "send workspace 1",
+  "command": "xdotool getactivewindow set_desktop_for_window 0",
+  "ground": "foreground",
+  "voice": "send workspace left",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "send workspace 2",
+  "command": "xdotool getactivewindow set_desktop_for_window 1",
+  "ground": "foreground",
+  "voice": "send workspace right",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "workspace 1",
+  "command": "xdotool set_desktop 0",
+  "ground": "foreground",
+  "voice": "workspace left",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "workspace 2",
+  "command": "xdotool set_desktop 1",
+  "ground": "foreground",
+  "voice": "workspace right",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "play",
+  "command": "xdotool key XF86AudioPlay",
+  "ground": "foreground",
+  "voice": "play",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "previous",
+  "command": "xdotool key XF86AudioPrev",
+  "ground": "foreground",
+  "voice": "previous",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "next",
+  "command": "xdotool key XF86AudioNext",
+  "ground": "foreground",
+  "voice": "next",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "volume up",
+  "command": "xdotool key XF86AudioRaiseVolume",
+  "ground": "foreground",
+  "voice": "volume up",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "volume down",
+  "command": "xdotool key XF86AudioLowerVolume",
+  "ground": "foreground",
+  "voice": "volume down",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "mute",
+  "command": "xdotool key XF86AudioMute",
+  "ground": "foreground",
+  "voice": "mute",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "unmute",
+  "command": "xdotool key XF86AudioMute",
+  "ground": "foreground",
+  "voice": "unmute",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "lock screen",
+  "command": "xdotool key Ctrl+alt+l",
+  "ground": "foreground",
+  "voice": "lock screen",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "empty recyle bin",
+  "command": "trash empty",
+  "ground": "foreground",
+  "voice": "empty recycle bin",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "bluetooth",
+  "command": "rfkill unblock bluetooth",
+  "ground": "foreground",
+  "voice": "bluetooth",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "bluetooth off",
+  "command": "rfkill block bluetooth",
+  "ground": "foreground",
+  "voice": "bluetooth off",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "reconnect",
+  "command": "nmcli radio wifi off && nmcli radio wifi on",
+  "ground": "foreground",
+  "voice": "reconnect",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "Wi-Fi off",
+  "command": "nmcli radio wifi off",
+  "ground": "foreground",
+  "voice": "Wi-Fi off",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "reboot",
+  "command": "systemctl reboot",
+  "ground": "foreground",
+  "voice": "reboot",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "reboot to bios",
+  "command": "systemctl reboot --firmware-setup",
+  "ground": "foreground",
+  "voice": "reboot to bios",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "shutdown",
+  "command": "systemctl poweroff",
+  "ground": "foreground",
+  "voice": "reboot to bios",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "suspend",
+  "command": "systemctl suspend",
+  "ground": "foreground",
+  "voice": "suspend",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "hibernate",
+  "command": "systemctl hibernate",
+  "ground": "foreground",
+  "voice": "hibernate",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "screen off",
+  "command": "xset dpms force off",
+  "ground": "foreground",
+  "voice": "screen off"
+ },
+ {
+  "trigger": "screen",
+  "command": "xset dpms force on",
+  "ground": "foreground",
+  "voice": "screen"
+ },
+ {
+  "trigger": "brightness up",
+  "command": "xdotool key F12",
+  "ground": "brighter",
+  "voice": "screen off"
+ },
+ {
+  "trigger": "brightness down",
+  "command": "xdotool key F11",
+  "ground": "foreground",
+  "voice": "dimmer"
+ },
+ {
+  "trigger": "terminal",
+  "command": "xdotool key ctrl+alt+t",
+  "ground": "foreground",
+  "voice": "terminal",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "switch windows",
+  "command": "xte \"keydown Alt_L\" \"key Tab\" \"sleep 1\" \"keyup Alt_L\"",
+  "ground": "foreground",
+  "voice": "switch windows",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "pause",
+  "command": "xdotool key XF86AudioPlay",
+  "ground": "foreground",
+  "voice": "pause",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "menu",
+  "command": "xdotool key super",
+  "ground": "foreground",
+  "voice": "menu",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "fullscreen",
+  "command": "xdotool key F11",
+  "ground": "foreground",
+  "voice": "fullscreen",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "exit fullscreen",
+  "command": "xdotool key F11",
+  "ground": "foreground",
+  "voice": "exit",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "file manager",
+  "command": "xdg-open /home/$USER",
+  "ground": "foreground",
+  "voice": "files",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "chrome",
+  "command": "google-chrome-stable",
+  "ground": "foreground",
+  "voice": "chrome",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "firefox",
+  "command": "firefox",
+  "ground": "foreground",
+  "voice": "firefox",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "chromium",
+  "command": "chromium-browser",
+  "ground": "foreground",
+  "voice": "chromium",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "opera",
+  "command": "opera",
+  "ground": "foreground",
+  "voice": "opera",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "feeds",
+  "command": "liferea",
+  "ground": "foreground",
+  "voice": "feeds",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "screenshot",
+  "command": "scrot -b -d 5 '%Y:%m:%d:%H:%M:%S.jpg' -e 'mv $f ~/Pictures/",
+  "ground": "foreground",
+  "voice": "screenshot",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "calculator",
+  "command": "gnome-calculator",
+  "ground": "foreground",
+  "voice": "screenshot",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "character map",
+  "command": "gucharmap",
+  "ground": "foreground",
+  "voice": "character map",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "disks",
+  "command": "gnome-disks",
+  "ground": "foreground",
+  "voice": "disks",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "fonts",
+  "command": "gnome-font-viewer",
+  "ground": "foreground",
+  "voice": "fonts",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "images",
+  "command": "xviewer",
+  "ground": "foreground",
+  "voice": "images",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "cleaner",
+  "command": "stacer",
+  "ground": "foreground",
+  "voice": "cleaner",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "fonts",
+  "command": "gnome-font-viewer",
+  "ground": "foreground",
+  "voice": "fonts",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "edit",
+  "command": "gedit || (xed && exit 1)",
+  "ground": "foreground",
+  "voice": "edit",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "code",
+  "command": "/usr/share/code/code --unity-launch %F",
+  "ground": "foreground",
+  "voice": "edit",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "Retro Gaming",
+  "command": "retroarch -f",
+  "ground": "foreground",
+  "voice": "retro gaming",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "gaming",
+  "command": "steam",
+  "ground": "foreground",
+  "voice": "steam",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "gimp",
+  "command": "gimp-2.8 %U",
+  "ground": "foreground",
+  "voice": "gimp",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "twitter",
+  "command": "corebird",
+  "ground": "foreground",
+  "voice": "twitter",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "messaging",
+  "command": "pidgin",
+  "ground": "foreground",
+  "voice": "messaging",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "skype",
+  "command": "/usr/bin/skypeforlinux %U",
+  "ground": "foreground",
+  "voice": "skype",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "email",
+  "command": "thunderbird",
+  "ground": "foreground",
+  "voice": "email",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "new email",
+  "command": "thunderbird -compose",
+  "ground": "foreground",
+  "voice": "new email",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "torrent",
+  "command": "transmission-gtk",
+  "ground": "foreground",
+  "voice": "torrent",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "spreadsheet",
+  "command": "libreoffice --calc",
+  "ground": "foreground",
+  "voice": "spreadsheet",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "writer",
+  "command": "libreoffice --writer",
+  "ground": "foreground",
+  "voice": "writer",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "presentation",
+  "command": "libreoffice --impress",
+  "ground": "foreground",
+  "voice": "presentation",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "webcam",
+  "command": "cheese",
+  "ground": "foreground",
+  "voice": "webcam",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "google music",
+  "command": "google-play-music-desktop-player",
+  "ground": "foreground",
+  "voice": "google music",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "kodi",
+  "command": "kodi-bin",
+  "ground": "foreground",
+  "voice": "kodi",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "spotify",
+  "command": "spotify",
+  "ground": "foreground",
+  "voice": "spotify",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "software",
+  "command": "mintinstall || (gnome-software && exit 1)",
+  "ground": "foreground",
+  "voice": "software",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "packages",
+  "command": "sudo synaptic",
+  "ground": "foreground",
+  "voice": "packages",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "monitor",
+  "command": "gnome-system-monitor",
+  "ground": "foreground",
+  "voice": "monitor",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+{
+  "trigger": "virtualbox",
+  "command": "virtualbox",
+  "ground": "foreground",
+  "voice": "virtualbox",
+  "voiceReply": "",
+  "allowParams": "false"
+ }
+]
