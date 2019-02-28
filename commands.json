@@ -331,7 +331,7 @@
  },
  {
   "trigger": "screenshot",
-  "command": "scrot -b -d 5 '%Y:%m:%d:%H:%M:%S.jpg' -e 'mv $f ~/Pictures/",
+  "command": "scrot -b -d 5 '%Y:%m:%d:%H:%M:%S.jpg' -e 'mv $f ~/Pictures/'",
   "ground": "foreground",
   "voice": "screenshot",
   "voiceReply": "",
